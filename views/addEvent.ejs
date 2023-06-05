@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>MyCalendar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+    <style>
+        .background {
+            width: 100%;
+            left: 15%;
+            height: auto;
+            overflow-x: hidden;
+        }
+        .fixed-bottom-bar {
+            position: fixed;
+            bottom:0;
+            left:0;
+            height: 70px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    
+    <input type="text" id="user" name="username" 
+    style="position:absolute; left:175px;top:160px; border:none; outline: none;"> 
+
+    <input type="text" id="user" name="username" 
+    style="position:absolute; left:50px;top:320px; border:none; outline: none; width: 300px; height:150px">
+    
+
+    <img class="background" src="images/AddEventPage.png">
+
+    <%- include("footer")-%>
+</body>
+</html>
