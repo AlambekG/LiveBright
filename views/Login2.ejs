@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>LogIn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  
+    <style>
+        body {
+            background-image: url("images/Login.png");
+            background-size: 100% auto;
+            width: 375px; /* Set a fixed width for iPhone 11 */
+            height: 812px; /* Set a fixed height for iPhone 11 */
+            margin: auto; /* Center the page horizontally */
+        }
+
+        .error-container {
+          background-color: #ffcccc;
+          border: 1px solid #ff0000;
+          border-radius: 5px;
+          padding: 10px;
+          margin-top: 10px;
+          text-align: center;
+        }
+
+        .error-message {
+          color: #ff0000;
+          font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="login-form" action="/" method="POST">
+
+        <input type="text" id="user" name="username" 
+            style="position:absolute; left:70px;top:287px; border:none; outline: none; font-size:15px;">
+            
+        <input type="password" id="password" name="password"
+            style="position:absolute; left:70px;top:372px; border:none; outline: none; font-size:15px;">
+
+        <button type="submit" style="border: none;background-color: transparent;
+            position:absolute; left:105px;top:460px; ">  
+                            </button>
+    </form>
+
+    <div class="error-container" <%= value %>>
+      <div class="error-message">
+        Ivalid username or password
+      </div>
+    </div>
+     
+</body>
+</html>

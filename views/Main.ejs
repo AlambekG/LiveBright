@@ -8,9 +8,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
  
     <style>
-        .background {
-            width: 100%;
-            left: 15%;
+         .background {
+            width: 400px; /* Fixed width */
             height: auto;
             overflow-x: hidden;
         }
@@ -19,6 +18,7 @@
             bottom:0;
             left:0;
             height: 70px;
+            width: 400px; /* Fixed width */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -110,7 +110,7 @@
 
     <form id="searchBox" action="/main" method="POST">
         <input type="text" id="myInput" name="search" 
-            style="position:absolute; left:140px;top:155px; border:none; outline: none; font-size:15px;">
+            style="position:absolute; left:140px;top:160px; border:none; outline: none; font-size:15px;">
     </form>
 
     <form action="/mainAdd" method="POST">
@@ -162,6 +162,7 @@
             </div>
     </form>
     
+    
     <form action="/gotoMyC" method="POST">
         <button  type="submit" style="border: none; background-color: transparent;
             position:absolute; left:320px;top: 670px; font-size:20px">  
@@ -183,6 +184,6 @@
              </button>
     </form>
     
-    <%-include("footer")-%>
+    <%-include("partials/footer")-%>
 </body>
 </html>

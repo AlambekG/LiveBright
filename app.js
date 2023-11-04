@@ -1,25 +1,27 @@
 const express = require("express")
 const app = express()
+const port = 3000
 
 app.use(express.urlencoded({extended:true}))
 app.use(express.static('public'));
 app.set("view engine", "ejs")
 
 app.get("/", function(req, res){
-    res.render("Login", {value:"style=display:none"})
+    res.render("Login.ejs")
     MainSearchBox = []
     MyCSearchBox = []
-    isAddedtoCal = false;
+    isAddedtoCal = false
 });
-
 
 app.post('/', function(req, res){
     const username = req.body.username;
     const password = req.body.password;
-    if (username === 'Test' && password === 'test') {
+    
+    if (username == 'test' && password == 'test') {
         res.redirect('/main');
     } else {
-        res.render("Login", {value: ""})
+        res.send('<script>alert("Invalid username or password!"); window.location.href = "/";</script>');
+        res.redirect("/");
     }   
 })
 
@@ -99,6 +101,6 @@ app.post('/gotoExplore', (req, res) => {
     res.redirect("/explore")
 })
 
-app.listen(8888, ()=>{
-    console.log("Server is running")
-})
+app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+});
