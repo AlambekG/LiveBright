@@ -1,5 +1,7 @@
 const express = require("express")
 const app = express()
+const db = require('./database');
+
 const port = 3000
 
 app.use(express.urlencoded({extended:true}))
@@ -29,6 +31,15 @@ let MainSearchBox = []
 let MyCSearchBox = []
 let isAddedtoCal = false
 
+const events = [
+    {
+        id: "1",
+        title: "party night",
+        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate",
+        date: "november 4",
+    }
+]
+
 app.get("/main", function(req, res){
     res.render("Main", {newListItems:MainSearchBox})
     MyCSearchBox = []
@@ -38,68 +49,63 @@ app.post("/main", (req, res) => {
     MainSearchBox.push(req.body.search)
     res.redirect("/main")
 })
-app.post("/mainAdd", (req, res) => {
-    MainSearchBox.push(req.body.name)
-    res.redirect("/main")
-})
-
 app.get("/day", function(req, res){
     res.render("Day")
     MyCSearchBox = []
     MainSearchBox = []
-})
-
-
-
-app.post("/gotoDay", function(req, res){
-    res.redirect("/day")
 })
 app.get('/myC', (req, res) => {
     MainSearchBox = []
     res.render("myCalendar", {newListItems: MyCSearchBox, isAdded: isAddedtoCal})
     //res.sendFile(__dirname + "/myCalendar.html")
 })
-app.post('/myC', (req, res) => {
-    MyCSearchBox.push(req.body.search)
-    res.redirect('/myC')
-})
-
 app.get('/add', (req, res) => {
     res.render("addEvent")
     MainSearchBox = []
     MyCSearchBox = []
-    //res.sendFile(__dirname + "/addEvent.html")
 })
-app.get('/explore', (req, res) => {
-    res.render("explore")
+
+app.get('/explore', async (req, res) => {
     MainSearchBox = []
     MyCSearchBox = []
-    //res.sendFile(__dirname + "/explore.html")
-})
+    try {
+        const allEvents = await db.event.find({});
+        console.log(allEvents)
+        res.render("explore", { events: allEvents });
+    } catch (error) {
+        console.error(error);
+        res.status(500).send("Internal Server Error");
+    }
+});
+
+
 app.get('/event', (req, res) => {
     res.render('Event', {isAdded: isAddedtoCal})
 })
+
+app.post("/add", async (req, res) => {
+    const newEvent = new db.event({
+        title:  req.body.title,
+        description: req.body.description,
+        date: req.body.date || ""
+    });
+    await newEvent.save();
+    res.redirect("explore")
+})
+
 app.post('/event', (req, res) => {
     isAddedtoCal = true;
     res.redirect('/event');
 })
-
-
-app.post('/gotoEvent', (req, res) => {
-    res.redirect('/event')
+app.post('/myC', (req, res) => {
+    MyCSearchBox.push(req.body.search)
+    res.redirect('/myC')
 })
-app.post('/gotoMyC', (req, res) => {
-    res.redirect("/myC")
-})
-app.post('/gotoHome', (req, res) => {
+app.post("/mainAdd", (req, res) => {
+    MainSearchBox.push(req.body.name)
     res.redirect("/main")
 })
-app.post('/gotoAdd', (req, res) => {
-    res.redirect("/add")
-})
-app.post('/gotoExplore', (req, res) => {
-    res.redirect("/explore")
-})
+
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);

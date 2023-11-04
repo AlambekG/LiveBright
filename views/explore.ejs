@@ -8,11 +8,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
     <style>
+        .container{
+            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 100vh; /* Set a maximum height (adjust as needed) */
+        }
         .background {
             width: 400px;
-            left: 15%;
-            height: auto;
-            overflow-x: hidden;
+            left: 20px;
         }
         .fixed-bottom-bar {
             position: fixed;
@@ -26,14 +28,28 @@
     </style>
 </head>
 <body>
-    <img class="background" src="images/ExplorePage.png">
+    <div class="container" style="margin-bottom: 100px;">
+        <img class="background" src="images/ExplorePage.png">
 
-    <form action="/gotoEvent" method="POST">
-        <button  type="submit" style="border:none; background-color: transparent;
-            position:absolute; left:30px;top: 100px; width:350px;height: 240px;">  
-             </button>
-    </form>
+        <div style="width: 350px; margin-left:25px; text-align: center;">
+            <% events.forEach(event => { %>
+            <% console.log(event) %>
+            <div style="box-shadow: 0px 0px 10px rgba(0,0,0,0.1); padding: 10px; margin-bottom: 20px;">
+                <h2> <%= event.title %> </h2>
+                <p> <%= event.date %> </p>
+                <p> <%= event.description %> </p>
+            </div>
+            <% }) %>
 
+        </div>
+
+        <form action="/event" method="get">
+            <button  type="submit" style="border:none; background-color: transparent;
+                position:absolute; left:30px;top: 100px; width:350px;height: 240px;">  
+                 </button>
+        </form>
+
+    </div>
 
     <%- include("partials/footer") -%>
 </body>

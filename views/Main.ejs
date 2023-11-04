@@ -145,7 +145,7 @@
     </div>
 
 
-    <form action="/gotoDay" method="POST">
+    <form action="/day" method="get">
 
         <div style="position:absolute; left:143px;top:420px;display: flex;  flex-direction: row; "> 
         <% for(let i = 0;i < newListItems.length;i ++){  %>
@@ -161,29 +161,6 @@
             <% } %>
             </div>
     </form>
-    
-    
-    <form action="/gotoMyC" method="POST">
-        <button  type="submit" style="border: none; background-color: transparent;
-            position:absolute; left:320px;top: 670px; font-size:20px">  
-             </button>
-    </form>
-    <form action="/gotoAdd" method="POST">
-        <button  type="submit" style="border: none; background-color: transparent;
-            position:absolute; left:220px;top: 670px; font-size:20px">  
-             </button>
-    </form>
-    <form action="/gotoExplore" method="POST">
-        <button  type="submit" style="border: none; background-color: transparent;
-            position:absolute; left:120px;top: 670px; font-size:20px">  
-             </button>
-    </form>
-    <form action="/gotoHome" method="POST">
-        <button  type="submit" style="border: none; background-color: transparent;
-            position:absolute; left:20px;top: 670px; font-size:20px">  
-             </button>
-    </form>
-    
     <%-include("partials/footer")-%>
 </body>
 </html>
