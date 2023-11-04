@@ -7,9 +7,11 @@ The LiveBright Calendar application features a customizable calendar view with l
 - [Lo-fi paper prototype](https://youtu.be/rA2bOvuEHj8)
 - [Hi-fi prototype demo](https://drive.google.com/file/d/1gSZus2Y3P-Aibae2HAWrOekMpZ8WS9dv/view?usp=sharing)
 
-![Screenshot 1](/public/images/MainPage.png)
-![Screenshot 2](public/images/ExplorePage.png)
 
+<div style="display: flex; justify-content: space-between;">
+    <img src="/public/images/MainPage.png" alt="Screenshot 1" width="250">
+    <img src="/public/images/DayPage.png" alt="Screenshot 2" width="250">
+</div>
 
 ## Installation
 
