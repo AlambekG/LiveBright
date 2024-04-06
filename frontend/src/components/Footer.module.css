@@ -1,0 +1,56 @@
+.background {
+  width: 400px;
+  left: 15%;
+  height: auto;
+  overflow-x: hidden;
+}
+.fixed_bottom_bar {
+  text-align:center;
+  position: fixed;
+  bottom:0;
+  height: 70px;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.mainbtn {
+  position:absolute; 
+  top:20px;
+  border: none; 
+  background-color: transparent;
+  margin-left: 50%;
+  left: -160px; 
+  font-size:25px;
+  cursor: pointer;
+}
+.expbtn {
+  position:absolute; 
+  top:20px;
+  border: none; 
+  background-color: transparent;
+  margin-left: 50%;
+  left: -65px; 
+  font-size:25px;
+  cursor: pointer;
+}
+.addbtn {
+  position:absolute; 
+  top:20px;
+  border: none; 
+  background-color: transparent;
+  margin-left: 50%;
+  left: 35px; 
+  font-size:25px;
+  cursor: pointer;
+}
+.mybtn {
+  position:absolute; 
+  top:20px;
+  border: none; 
+  background-color: transparent;
+  margin-left: 50%;
+  left: 130px; 
+  font-size:25px;
+  cursor: pointer;
+}
