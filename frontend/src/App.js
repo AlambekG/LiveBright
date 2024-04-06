@@ -4,7 +4,7 @@ import MainPage from './pages/MainPage';
 import EventPage from './pages/EventPage';
 import DayPage from './pages/DayPage';
 import ExplorePage from './pages/ExplorePage';
-import MyCalendarPage from './pages/MyCalendarPage';
+import MyCalendarPage from './pages/MyCPage';
 import AddEventPage from './pages/AddEventPage';
 
 function App() {

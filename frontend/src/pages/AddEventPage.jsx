@@ -1,10 +1,10 @@
 import React from 'react';
+import styles from './page.module.css';
 
 function AddEventPage() {
   return (
     <div>
-      <h2>Add Event Page</h2>
-      {/* page content here */}
+      <img className={styles.background} src='img/AddEventPage.png'></img>
     </div>
   );
 }

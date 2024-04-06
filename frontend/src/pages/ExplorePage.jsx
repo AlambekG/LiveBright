@@ -1,10 +1,10 @@
 import React from 'react';
+import styles from './page.module.css';
 
 function ExplorePage() {
   return (
     <div>
-      <h2>Explore Page</h2>
-      {/* page content here */}
+      <img className={styles.background} src='img/ExplorePage.png'></img>
     </div>
   );
 }

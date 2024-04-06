@@ -1,0 +1,65 @@
+.container{
+  overflow-y: auto; /* Enable vertical scrolling */
+  max-height: 100vh; /* Set a maximum height (adjust as needed) */
+}
+.background {
+  width: 400px;
+  left: 15%;
+  height: auto;
+  overflow-x: hidden;
+}
+.fixed-bottom-bar {
+  position: fixed;
+  bottom:0;
+  left:0;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.dropdown {
+  position: absolute;
+  display: inline-block;
+}
+.dropbtn {
+  background-color: #090909;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  top:150%;
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #090909;
+}
+.dropdown:hover .dropdown-content .dropdown-content2 {
+  display: block;
+}
+.dropdown-content2 {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 100px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  right: 0;
+  top:150%;
+}
+.dropdown-content2 a{
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #090909;
+}

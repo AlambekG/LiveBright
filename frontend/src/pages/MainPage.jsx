@@ -1,10 +1,10 @@
 import React from 'react';
+import styles from './page.module.css';
 
 function MainPage() {
   return (
     <div>
-      <h2>Main Page</h2>
-      {/* Main page content here */}
+      <img className={styles.background} src='img/MainPage.png'></img>
     </div>
   );
 }
