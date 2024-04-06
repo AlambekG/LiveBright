@@ -1,5 +1,7 @@
 # LiveBright Calendar Application
 
+#LiveBright release version 2.
+
 The LiveBright Calendar application features a customizable calendar view with location-based event discovery and filtering options. Users can filter events by categories such as music, sports, and art, as well as by date, time, and location. The app allows users to save events to their calendars, purchase tickets, and share events with friends.
 
 ## Demo
