@@ -1,6 +1,6 @@
 # LiveBright Calendar Application
 
-#LiveBright release version 2.
+#LiveBright dev version 3.
 
 The LiveBright Calendar application features a customizable calendar view with location-based event discovery and filtering options. Users can filter events by categories such as music, sports, and art, as well as by date, time, and location. The app allows users to save events to their calendars, purchase tickets, and share events with friends.
 
@@ -11,18 +11,18 @@ The LiveBright Calendar application features a customizable calendar view with l
 
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="/public/images/MainPage.png" alt="Screenshot 1" width="250">
-    <img src="/public/images/DemoScreen.png" alt="Screenshot 2" width="250">
-    <img src="/public/images/DayPage.png" alt="Screenshot 3" width="250">
+    <img src="/frontend/public/img/MainPage.png" alt="Screenshot 1" width="250">
+    <img src="/frontend/public/img/DemoScreen.png" alt="Screenshot 2" width="250">
+    <img src="/frontend/public/img/DayPage.png" alt="Screenshot 3" width="250">
 </div>
 
-## Installation
+<!-- ## Installation
 
 To run this application, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/your-username/your-repo.git`
 2. Install dependencies: `npm install`
-3. Start the server: `npm start`
+3. Start the server: `npm start` -->
 
 ## Usage
 
@@ -35,11 +35,12 @@ To run this application, follow these steps:
 
 - Node.js
 - Express.js
-- MongoDB
-- Mongoose
-- EJS (Embedded JavaScript)
+- PostgreSQL
+- React
+- Bootstrap
 - HTML/CSS
 - JavaScript
+- Docker
 
 ## License
 
