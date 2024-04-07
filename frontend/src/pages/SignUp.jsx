@@ -25,9 +25,11 @@ function SignUp (){
       console.log(email, password)
       const response = await axios.post('http://localhost:8000/api/sign-up', { email, password });
       console.log('Login successful', response.data);
+      alert("Success!")
       navigate('/main');
     }catch(e){
-      console.error('Login failed', e.response.data);
+      console.error('sign-up failed', e.response.data);
+      alert("Sign-up failed, try again!");
     }
   }
 

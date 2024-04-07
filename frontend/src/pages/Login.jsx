@@ -24,9 +24,11 @@ function Login (){
       console.log(email, password)
       const response = await axios.post('http://localhost:8000/api/login', { email, password });
       console.log('Login successful', response.data);
+      alert("Success!");
       navigate('/main');
     }catch(e){
       console.error('Login failed', e.response.data);
+      alert("Login failed, try again!");
     }
   }
 
