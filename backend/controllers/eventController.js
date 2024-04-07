@@ -1,9 +1,9 @@
-const db = require('../database');
+// const db = require('../database');
 
 exports.getExplorePage = async (req, res) => {
   // Get events from the database
   try {
-    const allEvents = await db.event.find({});
+    // const allEvents = await db.event.find({});
     console.log(allEvents);
     res.render('explore', { events: allEvents });
   } catch (error) {
@@ -19,11 +19,11 @@ exports.getAddPage = (req, res) => {
   res.render("addEvent")
 }
 exports.postAddPage = async (req, res) => {
-  const newEvent = new db.event({
-    title:  req.body.title,
-    description: req.body.description,
-    date: req.body.date || ""
-  });
+  // const newEvent = new db.event({
+  //   title:  req.body.title,
+  //   description: req.body.description,
+  //   date: req.body.date || ""
+  // });
   await newEvent.save();
   res.redirect("explore")
 }
