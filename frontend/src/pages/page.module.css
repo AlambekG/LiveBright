@@ -2,6 +2,12 @@
   overflow-y: auto; /* Enable vertical scrolling */
   max-height: 100vh; /* Set a maximum height (adjust as needed) */
 }
+.posCent{
+  position: absolute;
+  left:40%;
+  margin-left:-20px;
+  margin-top:40px;
+}
 .background {
   width: 400px;
   left: 15%;
@@ -53,4 +59,17 @@
   padding: 10px;
   text-decoration: none;
   color: #090909;
+}
+.error-container {
+  background-color: #ffcccc;
+  border: 1px solid #ff0000;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.error-message {
+  color: #ff0000;
+  font-size: 14px;
 }
