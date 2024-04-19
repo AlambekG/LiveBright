@@ -38,10 +38,8 @@ To run this application, follow these steps:
 - Express.js
 - PostgreSQL
 - React
-- Bootstrap
 - HTML/CSS
 - JavaScript
-- Docker
 
 ## License
 
