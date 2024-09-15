@@ -12,9 +12,9 @@ The LiveBright Calendar application features a customizable calendar view with l
 
 
 <div style="display: flex; justify-content: space-between;">
-    <img src="/frontend/public/img/MainPage.png" alt="Screenshot 1" width="250">
-    <img src="/frontend/public/img/DemoScreen.png" alt="Screenshot 2" width="250">
-    <img src="/frontend/public/img/DayPage.png" alt="Screenshot 3" width="250">
+    <img src="/frontend/public/img/MainPage.png" alt="Screenshot 1" width="320">
+    <img src="/frontend/public/img/DemoScreen.png" alt="Screenshot 2" width="320">
+    <img src="/frontend/public/img/DayPage.png" alt="Screenshot 3" width="320">
 </div>
 
 <!-- ## Installation
